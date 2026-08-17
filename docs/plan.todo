@@ -1,0 +1,79 @@
+Saga
+Compensation
+RetryPolicy
+TimeoutPolicy
+Condition
+ParallelTask
+JoinTask
+HumanTask
+EventTask
+...
+
+1. WorkflowDefinition
+        ↓
+2. WorkflowTask
+        ↓
+3. WorkflowRun
+        ↓
+4. TaskExecution
+        ↓
+5. TaskAttempt
+        ↓
+6. ExecuteTaskMessage
+        ↓
+7. Redis Queue
+        ↓
+8. Worker
+        ↓
+9. PostgreSQL
+
+PHASE 0
+────────────────────────────
+[✓] Repository structure
+[✓] Domain models
+[✓] Workflow definition
+[✓] Execution models
+[✓] Basic contracts
+
+
+PHASE 1
+────────────────────────────
+[ ] Redis connection
+[ ] Redis Stream
+[ ] Producer
+[ ] Consumer
+[ ] ACK
+[ ] Test Engine → Redis
+[ ] Test Redis → Worker
+
+
+PHASE 2
+────────────────────────────
+[ ] Worker runtime
+[ ] Task handler interface
+[ ] LOG task handler
+[ ] Task type → handler mapping
+[ ] Execute task
+[ ] ACK after successful execution
+
+
+PHASE 3
+────────────────────────────
+[ ] PostgreSQL connection
+[ ] Migration setup
+[ ] workflow_runs
+[ ] task_executions
+[ ] task_attempts
+[ ] Repository implementations
+[ ] Persist RUNNING
+[ ] Persist COMPLETED
+[ ] Persist FAILED
+
+
+PHASE 4
+────────────────────────────
+[ ] Connect everything
+[ ] Run one workflow
+[ ] Execute one task
+[ ] Persist result
+[ ] Query execution

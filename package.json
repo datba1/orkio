@@ -1,5 +1,5 @@
 {
-  "name": "mini-conductor",
+  "name": "orkio",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -9,7 +9,6 @@
     "dev:api": "tsx apps/api/src/server.ts",
     "dev:engine": "tsx apps/engine/src/engine.ts",
     "dev:worker": "tsx apps/worker/src/worker.ts",
-
     "build": "tsc",
     "test": "vitest",
     "test:watch": "vitest --watch"

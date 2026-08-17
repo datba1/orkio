@@ -1,0 +1,30 @@
+{
+  "name": "mini-conductor",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:api": "tsx apps/api/src/server.ts",
+    "dev:engine": "tsx apps/engine/src/engine.ts",
+    "dev:worker": "tsx apps/worker/src/worker.ts",
+
+    "build": "tsc",
+    "test": "vitest",
+    "test:watch": "vitest --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.0.0"
+  },
+  "dependencies": {
+    "fastify": "^5.0.0",
+    "ioredis": "^5.0.0",
+    "pg": "^8.0.0",
+    "pino": "^9.0.0",
+    "zod": "^4.0.0"
+  }
+}
